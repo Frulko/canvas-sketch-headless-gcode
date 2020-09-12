@@ -1,0 +1,20 @@
+{
+  "name": "sketches",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script01.js",
+  "scripts": {
+    "build": "node app_headless.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@turf/turf": "^5.1.6",
+    "canvas": "^2.6.1",
+    "canvas-sketch": "^0.7.4",
+    "canvas-sketch-util": "^1.10.0",
+    "gl-matrix": "^3.3.0",
+    "voronoi": "^1.0.0"
+  }
+}
