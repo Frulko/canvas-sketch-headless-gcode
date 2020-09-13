@@ -21,8 +21,8 @@ Random.setSeed(Date.now());
 
 
 const gCode = new GCodeFile({
-	feedRate: 8000, // G1 movement (drawing speed)
-  seekRate: 8000, // G0 movement (no drawing speed)
+	feedRate: 16000, // G1 movement (drawing speed)
+  seekRate: 32000, // G0 movement (no drawing speed)
 	onCommand: 'M03S90',
 	offCommand: 'M03S20',
 	powerDelay: 0.2,
@@ -33,15 +33,6 @@ const gCode = new GCodeFile({
 	flipY: false
 })
 
-const settings = {
-  // canvas,
-  suffix: Random.getSeed(),
-  dimensions: [25,32],
-  orientation: 'portrait',
-  pixelsPerInch: 300,
-  scaleToView: true,
-  units: 'cm'
-};
 
 const sketch = (props) => {
 
