@@ -54,7 +54,7 @@ const sketch = (props) => {
   // Convert the paths into polylines so we can apply line-clipping
   // When converting, pass the 'units' to get a nice default curve resolution
   let lines = pathsToPolylines(paths, { units });
-  console.log('lines', lines);
+  // console.log('lines', lines);
 
   // Clip to bounds, using a margin in working units
   const margin = 0; // in working 'units' based on settings
@@ -67,9 +67,7 @@ const sketch = (props) => {
   return gCode.downloadFile();
 };
 
-const svg = sketch({width: pWidth, height:pHeight,  units: 'cm', optimize: false});
-fs.writeFile('./output.gcode', svg, (err) => {
-    if (err) throw err;
-    console.log('Data written to file');
-});
 
+module.exports = () => {
+  return sketch({width: pWidth, height:pHeight,  units: 'cm', optimize: false});
+} 

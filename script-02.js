@@ -147,7 +147,7 @@ const sketch = (props) => {
   // Convert the paths into polylines so we can apply line-clipping
   // When converting, pass the 'units' to get a nice default curve resolution
   let lines = pathsToPolylines(paths, { units });
-  console.log('lines', lines);
+  // console.log('lines', lines);
 
   // Clip to bounds, using a margin in working units
   const margin = 0; // in working 'units' based on settings
