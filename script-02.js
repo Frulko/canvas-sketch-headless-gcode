@@ -160,9 +160,7 @@ const sketch = (props) => {
   return gCode.downloadFile();
 };
 
-const svg = sketch({width: pWidth, height:pHeight,  units: 'cm', optimize: false});
-fs.writeFile('./output.gcode', svg, (err) => {
-    if (err) throw err;
-    console.log('Data written to file');
-});
 
+module.exports = () => {
+  return sketch({width: pWidth, height:pHeight,  units: 'cm', optimize: false});
+} 
