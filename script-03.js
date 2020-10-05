@@ -71,8 +71,7 @@ const noiseStrength = Random.range(10,100.5);
 // You can force a specific seed by replacing this with a string value
 const defaultSeed = '';
 
-// Set a random seed so we can reproduce this print later
-Random.setSeed(Date.now());
+
 
 
 const gCode = new GCodeFile({
@@ -90,7 +89,9 @@ const gCode = new GCodeFile({
 
 
 const sketch = (props) => {
-
+  // Set a random seed so we can reproduce this print later
+  Random.setSeed(Date.now());
+  
   const { width, height, units } = props;
   gCode.updateCoordsArea(width, height);
   // Holds all our 'path' objects

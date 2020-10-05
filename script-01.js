@@ -16,8 +16,7 @@ let circlePos = [];
 // You can force a specific seed by replacing this with a string value
 const defaultSeed = '';
 
-// Set a random seed so we can reproduce this print later
-Random.setSeed(Date.now());
+
 
 
 const gCode = new GCodeFile({
@@ -35,7 +34,9 @@ const gCode = new GCodeFile({
 
 
 const sketch = (props) => {
-
+  // Set a random seed so we can reproduce this print later
+  Random.setSeed(Date.now());
+  
   const { width, height, units } = props;
   gCode.updateCoordsArea(width, height);
   // Holds all our 'path' objects
@@ -73,7 +74,7 @@ const sketch = (props) => {
       let finalePositions = [];
       let rotations = [-0.5, 0, 0.5]
 
-      for (let k = 0; k < 3; k++) {
+      for (let k = 0; k < 1; k++) {
           let tmpPositions = [];
           for (let i = 0; i < positions.length; i++) {
               let tmpPosition = []
